@@ -1,11 +1,3 @@
-// Função para verificar autenticação
-function checkAuth() {
-    const isAuthenticated = sessionStorage.getItem('isAuthenticated');
-    if (!isAuthenticated && !window.location.href.includes('login.html')) {
-        window.location.href = 'login.html';
-    }
-}
-
 // Função para navegação suave
 function setupSmoothScroll() {
     document.querySelectorAll('nav a').forEach(anchor => {
@@ -54,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.location.href.includes('main.html')) {
         setupSmoothScroll();
         setupScrollHighlight();
-        checkAuth();
         
         // Adiciona estilo para link ativo
         const style = document.createElement('style');
@@ -71,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const loginButton = document.querySelector('.enter-button');
         if (loginButton) {
             loginButton.addEventListener('click', () => {
-                sessionStorage.setItem('isAuthenticated', 'true');
                 window.location.href = 'main.html';
             });
         }
