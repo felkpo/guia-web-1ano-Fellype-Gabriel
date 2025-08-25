@@ -70,8 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.location.href.includes('login.html')) {
         const loginButton = document.querySelector('.enter-button');
         if (loginButton) {
-            loginButton.addEventListener('click', (e) => {
-                e.preventDefault();
+            loginButton.addEventListener('click', () => {
                 sessionStorage.setItem('isAuthenticated', 'true');
                 window.location.href = 'main.html';
             });
