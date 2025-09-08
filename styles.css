@@ -30,14 +30,16 @@ body {
 }
 
 .robo-image {
-    width: 200px;
+    width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: transform 0.3s ease;
+    margin: 20px 0;
 }
 
 .robo-image:hover {
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Header e Navegação */
